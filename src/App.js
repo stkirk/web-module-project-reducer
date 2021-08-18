@@ -11,6 +11,7 @@ import {
   changeOperation,
   clearDisplay,
   setMemory,
+  clearMemory,
 } from "./actions/actions";
 
 function App() {
@@ -51,7 +52,10 @@ function App() {
             <div className="row">
               <CalcButton onClick={() => dispatch(setMemory())} value={"M+"} />
               <CalcButton value={"MR"} />
-              <CalcButton value={"MC"} />
+              <CalcButton
+                onClick={() => dispatch(clearMemory())}
+                value={"MC"}
+              />
             </div>
 
             <div className="row">
